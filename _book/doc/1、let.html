@@ -1,0 +1,397 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1、let、const · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2、块级作用域.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.1" data-path="1、let.html">
+            
+                <a href="1、let.html">
+            
+                    
+                    1、let、const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="2、块级作用域.html">
+            
+                <a href="2、块级作用域.html">
+            
+                    
+                    2、块级作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="3、块级作用域和函数.html">
+            
+                <a href="3、块级作用域和函数.html">
+            
+                    
+                    3、块级作用域和函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="4、顶层对象&globalThis.html">
+            
+                <a href="4、顶层对象&globalThis.html">
+            
+                    
+                    4、顶层对象&globalThis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="5、const.html">
+            
+                <a href="5、const.html">
+            
+                    
+                    4、const
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1、let、const</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="let&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x53D8;&#x91CF;&#x58F0;&#x660E;">let&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x53D8;&#x91CF;&#x58F0;&#x660E;</h4>
+<ul>
+<li>let&#x58F0;&#x660E;&#x7684;&#x662F;&#x4EE3;&#x7801;&#x5757;&#x4E2D;&#x7684;&#x53D8;&#x91CF;</li>
+<li>for&#x5FAA;&#x73AF;&#x8BA1;&#x6570;&#x5668;&#x65F6;&#x5019;&#x7528;let&#x547D;&#x4EE4;</li>
+</ul>
+<pre><code class="lang-shell">var a = [];
+for (var i = 0; i &lt; 10; i++) {
+  a[i] = function () {
+    console.log(i);
+  };
+}
+a[6](); // 10
+</code></pre>
+<pre><code class="lang-shell">var a = [];
+for (let i = 0; i &lt; 10; i++) {
+  a[i] = function () {
+    console.log(i);
+  };
+}
+a[6](); // 6
+</code></pre>
+<blockquote>
+<p> &#x6CE8;&#x610F;&#xFF1A;</p>
+<p>&#x5BF9;&#x4E8E;var&#x58F0;&#x660E;&#x7684;&#x800C;&#x8A00;&#xFF0C;&#x5168;&#x5C40;&#x4E2D;&#x5C31;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;i&#xFF1B;&#x6CE8;&#x610F;&#x5728;function&#x4E2D;&#x7684;i&#x59CB;&#x7EC8;&#x662F;&#x6307;&#x5411;&#x5168;&#x5C40;&#x7684;i&#xFF1B;</p>
+<p>&#x5BF9;&#x4E8E;let&#x58F0;&#x660E;&#x7684;&#x800C;&#x8A00;&#xFF0C;&#x5F53;&#x524D;i&#x652F;&#x961F;&#x672C;&#x8F6E;&#x6709;&#x6548;</p>
+</blockquote>
+<ul>
+<li><p><code>for</code>&#x5FAA;&#x73AF;&#x8FD8;&#x7279;&#x522B;&#x4E4B;&#x5904;&#xFF1A;&#x8BBE;&#x7F6E;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x7684;&#x90A3;&#x90E8;&#x5206;&#x662F;&#x4E00;&#x4E2A;&#x7236;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x800C;&#x5FAA;&#x73AF;&#x4F53;&#x5185;&#x90E8;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x5B50;&#x4F5C;&#x7528;&#x57DF;</p>
+</li>
+<li><h4 id="&#x53D8;&#x91CF;&#x63D0;&#x5347;&#xFF1A;">&#x53D8;&#x91CF;&#x63D0;&#x5347;&#xFF1A;</h4>
+<ul>
+<li>var&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x58F0;&#x660E;&#x4E4B;&#x524D;&#x4F7F;&#x7528;&#xFF0C;&#x503C;&#x4E3A;<code>undefined</code></li>
+<li>let&#x4E0D;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#xFF0C;&#x5728;&#x58F0;&#x660E;&#x4E4B;&#x524D;&#x4F7F;&#x7528;&#xFF0C;&#x4F1A;&#x62A5;&#x9519;</li>
+</ul>
+</li>
+<li><h4 id="&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;&#xFF1A;">&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;&#xFF1A;</h4>
+<ul>
+<li>&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x8FDB;&#x884C;let&#x53D8;&#x91CF;&#x58F0;&#x660E;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x4F1A;&#x7ED1;&#x5B9A;&#x8FD9;&#x4E2A;&#x533A;&#x57DF;&#xFF0C;&#x8BE5;&#x53D8;&#x91CF;&#x4E0D;&#x518D;&#x53D7;&#x5916;&#x90E8;&#x5F71;&#x54CD;&#xFF0C;&#x58F0;&#x660E;&#x8BE5;&#x53D8;&#x91CF;&#x503C;&#x94B1;&#x7684;&#x533A;&#x57DF;&#x4E0D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x4E2A;&#x533A;&#x57DF;&#x6210;&#x4E3A;<code>&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;&#xFF08;TDZ&#xFF09;</code></li>
+<li>&#x6CE8;&#x610F;&#xFF1A;TDZ&#x7684;&#x51FA;&#x73B0;&#x5BFC;&#x81F4;<code>typeof</code>&#x4E0D;&#x518D;&#x662F;&#x4E00;&#x4E2A;&#x767E;&#x5206;&#x767E;&#x5B89;&#x5168;&#x7684;&#x64CD;&#x4F5C;&#xFF1B;&#x5728;TDZ&#x4E2D;&#x4F7F;&#x7528;typeof&#x5BF9;&#x4E8E;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x4F1A;&#x51FA;&#x73B0;<code>ReferenceError</code>&#xFF1B;&#x800C;&#x6CA1;&#x6709;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x53EA;&#x4F1A;&#x662F;<code>undefined</code>&#x4E0D;&#x4F1A;&#x62A5;&#x9519;</li>
+</ul>
+<pre><code class="lang-shell">// &#x4E0D;&#x62A5;&#x9519;
+var x = x;
+
+// &#x62A5;&#x9519;
+let x = x;
+// ReferenceError: x is not defined
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<p>&#x5BF9;&#x4E8E;<code>var x = x</code>,var&#x58F0;&#x660E;&#x7684;&#x6CA1;&#x6709;&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;</p>
+<p>&#x5BF9;&#x4E8E;<code>let x = x</code>,let&#x5B58;&#x5728;&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;&#xFF0C;&#x8FD9;&#x662F;&#x5728;&#x6CA1;&#x6709;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x4E4B;&#x524D;&#x5C31;&#x4F7F;&#x7528;&#x4E86;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x8D4B;&#x503C;</p>
+</blockquote>
+</li>
+</ul>
+<pre><code class="lang-shell">function bar(x = y, y = 2) {
+  return [x, y];
+}
+
+bar(); // &#x62A5;&#x9519;
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<p>&#x8FD9;&#x91CC;&#x662F;&#x6BD4;&#x8F83;&#x9690;&#x853D;&#x7684;&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;&#xFF0C;&#x5728;&#x6CA1;&#x6709;&#x58F0;&#x660E;y&#x4E4B;&#x524D;&#x5C31;&#x53BB;&#x4F7F;&#x7528;&#x4E86;y&#x3002;</p>
+<h1 id="&#xFF1F;">&#xFF1F;</h1>
+<p>&#x5173;&#x4E8E;&#x8FD9;&#x91CC;&#x6709;&#x4E2A;&#x7591;&#x95EE;&#x5C31;&#x662F;&#xFF0C;y&#x7B97;&#x662F;let&#x58F0;&#x660E;&#x7684;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x4E5F;&#x4E0D;&#x53EF;&#x4EE5;&#x63D0;&#x524D;&#x4F7F;&#x7528;</p>
+</blockquote>
+<h4 id="let&#x4E0D;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x58F0;&#x660E;"><code>let</code>&#x4E0D;&#x5141;&#x8BB8;&#x91CD;&#x590D;&#x58F0;&#x660E;</h4>
+<ul>
+<li>&#x4E0D;&#x80FD;&#x5728;&#x540C;&#x4E00;&#x4EE3;&#x7801;&#x5757;&#x4E2D;&#x91CD;&#x590D;let&#x58F0;&#x660E;&#xFF1B;&#x4E0D;&#x8BBA;let&#x58F0;&#x660E;&#x5148;&#x540E;&#x90FD;&#x4F1A;&#x62A5;&#x9519;</li>
+</ul>
+<pre><code class="lang-shell">// &#x62A5;&#x9519;
+function func() {
+  let a = 10;
+  var a = 1;
+}
+
+// &#x62A5;&#x9519;
+function func() {
+  let a = 10;
+  let a = 1;
+}
+</code></pre>
+<ul>
+<li>&#x51FD;&#x6570;&#x5185;&#x90E8;&#x4E5F;&#x4E0D;&#x80FD;&#x91CD;&#x590D;&#x58F0;&#x660E;&#x53C2;&#x6570;</li>
+</ul>
+<pre><code class="lang-shell">function func(arg) {
+  let arg;
+}
+func() // &#x62A5;&#x9519;
+
+function func(arg) {
+  {
+    let arg;
+  }
+}
+func() // &#x4E0D;&#x62A5;&#x9519;
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2、块级作用域.html" class="navigation navigation-next " aria-label="Next page: 2、块级作用域">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1、let、const","level":"1.1.1","depth":2,"next":{"title":"2、块级作用域","level":"1.1.2","depth":2,"path":"doc/2、块级作用域.md","ref":"doc/2、块级作用域.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"1、let、const","level":"1.1.1","depth":2,"path":"doc/1、let.md","ref":"doc/1、let.md","articles":[]},{"title":"2、块级作用域","level":"1.1.2","depth":2,"path":"doc/2、块级作用域.md","ref":"doc/2、块级作用域.md","articles":[]},{"title":"3、块级作用域和函数","level":"1.1.3","depth":2,"path":"doc/3、块级作用域和函数.md","ref":"doc/3、块级作用域和函数.md","articles":[]},{"title":"4、顶层对象&globalThis","level":"1.1.4","depth":2,"path":"doc/4、顶层对象&globalThis.md","ref":"doc/4、顶层对象&globalThis.md","articles":[]},{"title":"4、const","level":"1.1.5","depth":2,"path":"doc/5、const.md","ref":"doc/5、const.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/1、let.md","mtime":"2019-12-26T09:41:40.657Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-26T10:09:10.512Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

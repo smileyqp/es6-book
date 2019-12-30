@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>5、const · GitBook</title>
+        <title>6、变量解构赋值 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="6、变量解构赋值.html" />
+    <link rel="next" href="7、Set.html" />
     
     
-    <link rel="prev" href="4、顶层对象&globalThis.html" />
+    <link rel="prev" href="5、const.html" />
     
 
     </head>
@@ -155,7 +155,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.5" data-path="5、const.html">
+        <li class="chapter " data-level="1.1.5" data-path="5、const.html">
             
                 <a href="5、const.html">
             
@@ -168,7 +168,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.6" data-path="6、变量解构赋值.html">
+        <li class="chapter active" data-level="1.1.6" data-path="6、变量解构赋值.html">
             
                 <a href="6、变量解构赋值.html">
             
@@ -268,7 +268,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >5、const</a>
+        <a href=".." >6、变量解构赋值</a>
     </h1>
 </div>
 
@@ -283,60 +283,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="const">const</h1>
-<h4 id="const">const</h4>
+                                <h5 id="&#x89E3;&#x6784;&#x8D4B;&#x503C;">&#x89E3;&#x6784;&#x8D4B;&#x503C;</h5>
 <ul>
-<li><p>const&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x53EA;&#x8BFB;&#x5E38;&#x91CF;&#xFF0C;&#x4E00;&#x65E6;&#x58F0;&#x660E;&#x503C;&#x4E0D;&#x53EF;&#x4EE5;&#x6539;&#x52A8;&#xFF1B;&#x5E76;&#x4E14;&#x4E00;&#x65E6;&#x58F0;&#x660E;&#x5C31;&#x5FC5;&#x987B;&#x7ACB;&#x5373;&#x521D;&#x59CB;&#x5316;</p>
-</li>
-<li><p><code>const</code>&#x4E0E;<code>let</code>&#x4E00;&#x6837;&#x53EA;&#x5728;&#x58F0;&#x660E;&#x7684;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x6709;&#x6548;</p>
-</li>
-<li><p><code>const</code>&#x5B58;&#x5728;&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;&#xFF0C;&#x53EA;&#x80FD;&#x5728;&#x58F0;&#x660E;&#x540E;&#x4F7F;&#x7528;</p>
-</li>
-<li><p><code>const</code>&#x4E0E;<code>let</code>&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x4E00;&#x6837;&#x4E0D;&#x53EF;&#x4EE5;&#x91CD;&#x590D;&#x58F0;&#x660E;</p>
-</li>
-<li><p>&#x6CE8;&#x610F;<code>const</code>&#x5B9E;&#x9645;&#x4FDD;&#x8BC1;&#x7684;&#x5E76;&#x4E0D;&#x662F;&#x503C;&#x4E0D;&#x53D8;&#xFF0C;&#x800C;&#x662F;&#x5176;&#x6307;&#x5411;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x4E0D;&#x53D8;&#xFF0C;&#x81F3;&#x4E8E;&#x5176;&#x5185;&#x90E8;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x662F;&#x5426;&#x6539;&#x53D8;&#x5C31;&#x4E0D;&#x80FD;&#x63A7;&#x5236;</p>
-<pre><code class="lang-shell">const foo = {};
-
-// &#x4E3A; foo &#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x6210;&#x529F;
-foo.prop = 123;
-foo.prop // 123
-
-// &#x5C06; foo &#x6307;&#x5411;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5C31;&#x4F1A;&#x62A5;&#x9519;
-foo = {}; // TypeError: &quot;foo&quot; is read-only
-</code></pre>
-<blockquote>
-<p> &#x63D0;&#x793A;&#xFF1A;&#x5E38;&#x91CF;&#x50A8;&#x5B58;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#xFF0C;&#x5730;&#x5740;&#x6307;&#x5411;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x53EA;&#x662F;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;&#x662F;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x7684;</p>
-</blockquote>
-<pre><code class="lang-shell">const a = [];
-a.push(&apos;Hello&apos;); // &#x53EF;&#x6267;&#x884C;
-a.length = 0;    // &#x53EF;&#x6267;&#x884C;
-a = [&apos;Dave&apos;];    // &#x62A5;&#x9519;
-</code></pre>
-<blockquote>
-<p>&#x63D0;&#x793A;&#xFF1A;&#x5E38;&#x91CF;a&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x672C;&#x8EAB;&#x662F;&#x53EF;&#x5199;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x5C06;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x590D;&#x5236;&#x7ED9;a&#x7684;&#x8BDD;&#x5C31;&#x4F1A;&#x62A5;&#x9519;</p>
-</blockquote>
-</li>
-<li><p>&#x5982;&#x679C;&#x60F3;&#x51BB;&#x7ED3;<code>const</code>&#x58F0;&#x660E;&#x7684;&#x5E38;&#x91CF;&#x53EF;&#x4EE5;&#x7528;<code>freeze</code>&#x65B9;&#x6CD5;</p>
-<pre><code class="lang-shell">const foo = Object.freeze({});
-
-// &#x5E38;&#x89C4;&#x6A21;&#x5F0F;&#x65F6;&#xFF0C;&#x4E0B;&#x9762;&#x4E00;&#x884C;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#xFF1B;
-// &#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x65F6;&#xFF0C;&#x8BE5;&#x884C;&#x4F1A;&#x62A5;&#x9519;
-foo.prop = 123;
-</code></pre>
-<ul>
-<li><p>&#x51BB;&#x7ED3;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;&#x4E4B;&#x5916;&#xFF0C;&#x51BB;&#x7ED3;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;</p>
-<pre><code class="lang-shell">var constantize = (obj) =&gt; {
-  Object.freeze(obj);
-  Object.keys(obj).forEach( (key, i) =&gt; {
-    if ( typeof obj[key] === &apos;object&apos; ) {
-      constantize( obj[key] );
-    }
-  });
-};
-</code></pre>
-</li>
-</ul>
-</li>
+<li>&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x6A21;&#x5F0F;&#x4ECE;<code>&#x6570;&#x7EC4;</code>&#x548C;<code>&#x5BF9;&#x8C61;</code>&#x4E2D;&#x63D0;&#x53D6;&#x4E4B;&#x5BF9;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x8D4B;&#x503C;</li>
+<li></li>
 </ul>
 
                                 
@@ -365,12 +315,12 @@ foo.prop = 123;
 
             
                 
-                <a href="4、顶层对象&globalThis.html" class="navigation navigation-prev " aria-label="Previous page: 4、顶层对象&globalThis">
+                <a href="5、const.html" class="navigation navigation-prev " aria-label="Previous page: 5、const">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="6、变量解构赋值.html" class="navigation navigation-next " aria-label="Next page: 6、变量解构赋值">
+                <a href="7、Set.html" class="navigation navigation-next " aria-label="Next page: 7、Set">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -381,7 +331,7 @@ foo.prop = 123;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5、const","level":"1.1.5","depth":2,"next":{"title":"6、变量解构赋值","level":"1.1.6","depth":2,"path":"doc/6、变量解构赋值.md","ref":"doc/6、变量解构赋值.md","articles":[]},"previous":{"title":"4、顶层对象&globalThis","level":"1.1.4","depth":2,"path":"doc/4、顶层对象&globalThis.md","ref":"doc/4、顶层对象&globalThis.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/5、const.md","mtime":"2019-12-27T10:29:14.064Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-30T07:57:25.412Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6、变量解构赋值","level":"1.1.6","depth":2,"next":{"title":"7、Set","level":"1.1.7","depth":2,"path":"doc/7、Set.md","ref":"doc/7、Set.md","articles":[]},"previous":{"title":"5、const","level":"1.1.5","depth":2,"path":"doc/5、const.md","ref":"doc/5、const.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/6、变量解构赋值.md","mtime":"2019-12-27T08:34:10.332Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-30T07:57:25.412Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

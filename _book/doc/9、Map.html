@@ -1,0 +1,599 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>9、Map · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="10、WeakMap.html" />
+    
+    
+    <link rel="prev" href="8、WeakSet.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="1、let.html">
+            
+                <a href="1、let.html">
+            
+                    
+                    1、let、const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="2、块级作用域.html">
+            
+                <a href="2、块级作用域.html">
+            
+                    
+                    2、块级作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="3、块级作用域和函数.html">
+            
+                <a href="3、块级作用域和函数.html">
+            
+                    
+                    3、块级作用域和函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="4、顶层对象&globalThis.html">
+            
+                <a href="4、顶层对象&globalThis.html">
+            
+                    
+                    4、顶层对象&globalThis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="5、const.html">
+            
+                <a href="5、const.html">
+            
+                    
+                    5、const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="6、变量解构赋值.html">
+            
+                <a href="6、变量解构赋值.html">
+            
+                    
+                    6、变量解构赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="7、Set.html">
+            
+                <a href="7、Set.html">
+            
+                    
+                    7、Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="8、WeakSet.html">
+            
+                <a href="8、WeakSet.html">
+            
+                    
+                    8、WeakSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.9" data-path="9、Map.html">
+            
+                <a href="9、Map.html">
+            
+                    
+                    9、Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="10、WeakMap.html">
+            
+                <a href="10、WeakMap.html">
+            
+                    
+                    10、WeakMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >9、Map</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="map">Map</h4>
+<ul>
+<li><p>Map&#x7684;&#x952E;&#x503C;&#x4E0D;&#x9650;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;(&#x503C;&#x5BF9;&#x503C;&#x8FDB;&#x884C;&#x5B58;&#x50A8;)&#x3002;Object&#x7684;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x53EA;&#x63A5;&#x53D7;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;&#x952E;&#x540D;</p>
+<pre><code class="lang-shell">//Object&#x4F8B;&#x5B50;
+const data = {};
+const ele = [1,2,3];
+
+data[ele] = 111;
+console.log(data);        //{1,2,3:111}
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5C06;ele&#x7684;&#x6570;&#x7EC4;&#x8F6C;&#x5316;&#x6210;&#x4E86;&#x5B57;&#x7B26;&#x4E32;<code>1,2,3</code>&#xFF0C;&#x7136;&#x540E;&#x7528;<code>1,2,3</code>&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;key&#x7684;</p>
+</blockquote>
+<pre><code class="lang-shell">//Map&#x4F8B;&#x5B50;
+const map = new Map();
+const o = {smileyqp:&apos;testit&apos;}
+
+map.set(o,&apos;content&apos;)
+map.get(o)    //content
+
+map.has(o)    //true
+map.delete(o)    //true
+map.has(o)    //false
+</code></pre>
+</li>
+<li><p>&#x4EFB;&#x4F55;&#x5177;&#x6709;<code>literator</code>&#x501F;&#x53E3;&#x5E76;&#x4E14;&#x6210;&#x5458;&#x662F;&#x4E00;&#x4E2A;&#x53CC;&#x5143;&#x7D20;&#x6570;&#x7EC4;&#x7684;&#x7ED3;&#x6784;&#x90FD;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x751F;&#x6210;&#x65B0;&#x7684;Map</p>
+<ul>
+<li>Array:Map&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4F5C;&#x4E3A;&#x4E00;&#x7EC4;<code>&#x952E;&#x503C;&#x5BF9;&#x7684;&#x6570;&#x7EC4;</code>&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x521D;&#x59CB;&#x5316;</li>
+</ul>
+<pre><code class="lang-shell">const map = new Map([
+    [&apos;name&apos;:&apos;smileyqp&apos;],
+    [&apos;age&apos;:20]
+]);
+
+map.size        //2
+map.has(&apos;name&apos;)        //true
+map.has(&apos;age&apos;)        //true
+map.get(&apos;name&apos;)        //smileyqp
+map.get(&apos;age&apos;)        //20
+</code></pre>
+<ul>
+<li><p>Set&#xFF1A;</p>
+<pre><code class="lang-shell">const set = new Set([
+    [&apos;name&apos;:&apos;smileyqp&apos;],
+    [&apos;age&apos;:20]
+]);
+//set&#x662F;&#x4E24;&#x4E2A;&#x503C;&#x5206;&#x522B;&#x4E3A;[&apos;name&apos;:&apos;smileyqp&apos;]  [&apos;age&apos;:20]&#x7684;
+const map = new Map(set);
+
+map.size        //2
+map.has(&apos;name&apos;)        //true
+map.has(&apos;age&apos;)        //true
+map.get(&apos;name&apos;)        //smileyqp
+map.get(&apos;age&apos;)        //20
+</code></pre>
+</li>
+<li><p>Map:</p>
+<pre><code class="lang-shell">const map1 = new Map([
+    [&apos;name&apos;:&apos;smileyqp&apos;],
+    [&apos;age&apos;:20]
+]);
+const map = new Map(map1);
+
+map.size        //2
+map.has(&apos;name&apos;)        //true
+map.has(&apos;age&apos;)        //true
+map.get(&apos;name&apos;)        //smileyqp
+map.get(&apos;age&apos;)        //20
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Map&#x4E2D;&#x591A;&#x6B21;&#x8D4B;&#x503C;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x8986;&#x76D6;&#x524D;&#x9762;</p>
+<pre><code class="lang-shell">const map = new Map();
+map.set(111,&apos;ok&apos;)
+map.set(111,&apos;hello world&apos;)
+
+console.log(map.get(111))//hello world
+</code></pre>
+</li>
+<li><p>Map&#x4E2D;&#xFF0C;&#x952E;&#x503C;&#x8DDF;&#x5185;&#x5B58;&#x5730;&#x5740;&#x7ED1;&#x5B9A;&#xFF0C;&#x5E76;&#x975E;&#x8DDF;&#x503C;&#x7ED1;&#x5B9A;&#xFF1B;&#x53EA;&#x6709;&#x540C;&#x4E00;&#x5F15;&#x7528;&#x624D;&#x89C6;&#x4F5C;&#x540C;&#x4E00;&#x4E2A;&#x952E;</p>
+<pre><code class="lang-shell">const map = new Map();
+map.set([5],&apos;hello&apos;);
+map.get([5]);    //undefined
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;set&#x548C;get&#x65B9;&#x6CD5;&#x8868;&#x9762;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x952E;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x7EC4;&#x5B9E;&#x4F8B;&#xFF0C;&#x5185;&#x5B58;&#x5730;&#x5740;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x56E0;&#x6B64;Map&#x5C06;&#x5176;&#x89C6;&#x4E3A;&#x4E24;&#x4E2A;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x53D6;&#x5230;&#x503C;</p>
+</blockquote>
+</li>
+<li><p>Map&#x4E2D;&#x7B80;&#x5355;&#x7C7B;&#x578B;&#x7684;&#x952E;&#x503C;&#xFF08;&#x6570;&#x5B57;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x5E03;&#x5C14;&#x503C;&#xFF09;&#x53EA;&#x8981;&#x4E25;&#x683C;&#x76F8;&#x7B49;&#xFF0C;&#x90A3;&#x4E48;&#x8BA4;&#x4E3A;&#x662F;&#x540C;&#x4E00;&#x4E2A;</p>
+<pre><code class="lang-shell">let map = new Map();
+
+map.set(-0,233)
+map.get(0)    //233
+
+map.set(true,111)
+map.set(&apos;true&apos;,222)
+map.get(true);        //111
+
+map.set(undefined,123);
+map.set(null,111);
+map.get(undefined);        //123
+
+map.set(NaN,1);
+map.get(NaN);    //1
+</code></pre>
+</li>
+</ul>
+<h4 id="map&#x7684;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x548C;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;">Map&#x7684;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x548C;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;</h4>
+<ul>
+<li>size</li>
+<li>set(key,value)</li>
+<li>get(key)</li>
+<li>has(key)</li>
+<li>delete(key)</li>
+<li>clear()    &#x6E05;&#x9664;&#x6240;&#x6709;&#x6210;&#x5458;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h4 id="&#x904D;&#x5386;&#x65B9;&#x6CD5;">&#x904D;&#x5386;&#x65B9;&#x6CD5;</h4>
+<ul>
+<li>&#x4E09;&#x4E2A;&#x904D;&#x5386;&#x751F;&#x6210;&#x51FD;&#x6570;&#x548C;&#x4E00;&#x4E2A;&#x904D;&#x5386;&#x65B9;&#x6CD5;<ul>
+<li>keys</li>
+<li>values</li>
+<li>entries&#x904D;&#x5386;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;[key&#xFF0C;value]&#x5F62;&#x5F0F;</li>
+<li>forEach</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-shell">for(let item of map.keys()){}
+
+for(let item of map.values()){}
+
+for(let item of map.entries()){}
+for(let [key,value] of map.entries()){}
+for(let [key,value] of map){}    //&#x7B49;&#x540C;&#x4E8E;&#x4F7F;&#x7528;map.entries()
+</code></pre>
+<h6 id="map&#x9ED8;&#x8BA4;&#x904D;&#x5386;&#x63A5;&#x53E3;&#x662F;entries&#xFF1B;set&#x9ED8;&#x8BA4;&#x904D;&#x5386;&#x63A5;&#x53E3;&#x662F;values">Map&#x9ED8;&#x8BA4;&#x904D;&#x5386;&#x63A5;&#x53E3;&#x662F;entries&#xFF1B;Set&#x9ED8;&#x8BA4;&#x904D;&#x5386;&#x63A5;&#x53E3;&#x662F;values</h6>
+<h4 id="map&#x8F6C;&#x5316;&#x6210;&#x6570;&#x7EC4;&#x4EE5;&#x53CA;&#x904D;&#x5386;&#x8FC7;&#x6EE4;">Map&#x8F6C;&#x5316;&#x6210;&#x6570;&#x7EC4;&#x4EE5;&#x53CA;&#x904D;&#x5386;&#x8FC7;&#x6EE4;</h4>
+<ul>
+<li>&#x6570;&#x7EC4;&#x8F6C;&#x5316;</li>
+</ul>
+<pre><code class="lang-shell">const map = new Map([
+    [1,&apos;111&apos;],
+    [2,&apos;222&apos;],
+    [3,&apos;333&apos;]
+]);
+[...map.keys()]
+[...map.values()]
+[...map.entries()]    //[[1,&apos;111&apos;],[2,&apos;222&apos;],[3,&apos;333&apos;]]
+[...map]    //[[1,&apos;111&apos;],[2,&apos;222&apos;],[3,&apos;333&apos;]]
+</code></pre>
+<ul>
+<li>&#x501F;&#x52A9;&#x6570;&#x7EC4;&#x904D;&#x5386;&#x8FC7;&#x6EE4;</li>
+</ul>
+<pre><code class="lang-shell">const map = new Map([
+    [1,&apos;111&apos;],
+    [2,&apos;222&apos;],
+    [3,&apos;333&apos;]
+]);
+const map1 = new Map(
+[...map].filter((k,v)=&gt;{k&lt;=2});        //&#x4EA7;&#x751F;{1=&gt;&apos;111&apos;,2=&gt;&apos;222&apos;}&#x7ED3;&#x6784;&#x7684;Map
+)
+const map2 = new Map(
+[...map].map((k,v)=&gt;[k*2,v+&apos;smile&apos;])    //&#x4EA7;&#x751F;{2=&gt;&apos;111smile&apos;,4=&gt;&apos;222smile&apos;,6=&gt;&apos;333smile&apos;}
+)
+</code></pre>
+<ul>
+<li><p>forEach&#x65B9;&#x6CD5;</p>
+<pre><code class="lang-shell">map.forEach((value,key,map)=&gt;{},reporter)    //reporter&#x53C2;&#x6570;&#x662F;&#x7528;&#x4E8E;&#x7ED1;&#x5B9A;this
+</code></pre>
+</li>
+</ul>
+<h4 id="map&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8F6C;&#x5316;">Map&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8F6C;&#x5316;</h4>
+<ul>
+<li>Map&#x8F6C;&#x5316;&#x6210;Array&#xFF08;&#x62D3;&#x5C55;&#x64CD;&#x4F5C;&#x7B26;...&#xFF09;</li>
+<li>Array&#x8F6C;&#x5316;&#x6210;Map(&#x4F20;&#x5165;&#x6570;&#x7EC4;&#x8FDB;&#x5165;Map&#x6784;&#x9020;&#x51FD;&#x6570;)</li>
+<li>Map&#x8F6C;&#x5316;&#x6210;&#x5BF9;&#x8C61;</li>
+</ul>
+<pre><code class="lang-shell">funcrion strMaptoObj(strMap){
+    let obj = Object.create(null);
+    for(let [key,val] of strMap){
+        obk[key] = val;
+    }
+}
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;Map&#x4E2D;&#x7684;&#x952E;&#x4E3A;String&#x90A3;&#x4E48;&#x4F1A;&#x76F4;&#x63A5;&#x8F6C;&#x5316;&#xFF1B;&#x5982;&#x679C;&#x90E8;&#x4F4D;String&#x90A3;&#x4E48;&#x4F1A;&#x8F6C;&#x5316;&#x6210;String&#x518D;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;</p>
+</blockquote>
+<ul>
+<li>Objeact&#x8F6C;&#x5316;&#x6210;Map</li>
+</ul>
+<pre><code class="lang-shell"> function objTostrMap(obj){
+     let strMap = new Map();
+     for(let k of Object.keys(obj){
+         strMap.set(k,obj[k])
+     }
+ }
+</code></pre>
+<ul>
+<li><p>Map&#x8F6C;&#x5316;&#x6210;JSON</p>
+<ul>
+<li>&#x8F6C;&#x5316;&#x6210;&#x5BF9;&#x8C61;JSON&#xFF1A;Map&#x4E2D;&#x7684;&#x952E;&#x90FD;&#x4E3A;String</li>
+</ul>
+<pre><code class="lang-shell">//&#x8F6C;&#x5316;&#x6210;Object&#x518D;JSON.stringify()&#x5C06;Object&#x8F6C;&#x5316;&#x6210;JSON
+fuunction mapToJson(strMap){
+    return JSON.stringify(strMaptoObj(strMap))
+}
+</code></pre>
+<ul>
+<li>&#x8F6C;&#x5316;&#x6210;&#x6570;&#x7EC4;JSON:Map&#x7684;&#x952E;&#x5305;&#x542B;&#x975E;String&#x7684;&#x503C;</li>
+</ul>
+<pre><code class="lang-shell">function mapToArrJson(strMap){
+    return JSON.stringify([...strMap])
+}
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>JSON&#x8F6C;&#x5316;&#x6210;Map</p>
+<ul>
+<li>&#x5E38;&#x89C1;&#x952E;&#x540D;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7684;JSON&#x8F6C;&#x5316;&#x6210;Map&#xFF08;&#x8F6C;&#x5316;&#x6210;Object&#xFF1B;&#x8F6C;&#x5316;&#x6210;Map&#xFF09;</li>
+</ul>
+<pre><code class="lang-shell">function JsonToMap(jsonstr){
+    return objTostrMap(JSON.parse(jsonstr))
+}
+</code></pre>
+<ul>
+<li>&#x6574;&#x4E2A;JSON&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5E76;&#x4E14;&#x6570;&#x7EC4;&#x672C;&#x8EAB;&#x6709;&#x4E8B;&#x4E00;&#x4E2A;&#x6709;&#x4E24;&#x4E2A;&#x6210;&#x5458;&#x7684;&#x6570;&#x7EC4;&#xFF1B;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Map&#x8F6C;&#x5316;&#x6210;&#x4E3A;JSON&#x7684;&#x9006;&#x64CD;&#x4F5C;</li>
+</ul>
+<pre><code class="lang-shell">function josnarrayToMap(jsonstr){
+    return new Map(JSON.parse(jsonstr))
+}
+</code></pre>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="8、WeakSet.html" class="navigation navigation-prev " aria-label="Previous page: 8、WeakSet">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="10、WeakMap.html" class="navigation navigation-next " aria-label="Next page: 10、WeakMap">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"9、Map","level":"1.1.9","depth":2,"next":{"title":"10、WeakMap","level":"1.1.10","depth":2,"path":"doc/10、WeakMap.md","ref":"doc/10、WeakMap.md","articles":[]},"previous":{"title":"8、WeakSet","level":"1.1.8","depth":2,"path":"doc/8、WeakSet.md","ref":"doc/8、WeakSet.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/9、Map.md","mtime":"2019-12-30T07:49:37.798Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-30T07:57:25.412Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -11,4 +11,9 @@
     * [8、WeakSet](doc/8、WeakSet.md)
     * [9、Map](doc/9、Map.md)
     * [10、WeakMap](doc/10、WeakMap.md)
+    * [11、Proxy](doc/11、Proxy.md)
+    * [12、Reflect](doc/12、Reflect.md)
+    * [13、Promise对象](doc/13、Promise对象.md)
+    * [14、async函数](doc/14、async函数.md)
+    * [15、Generator函数的语法](doc/15、Generator函数的语法.md)
 

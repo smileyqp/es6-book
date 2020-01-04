@@ -1,0 +1,536 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>7、Set · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8、WeakSet.html" />
+    
+    
+    <link rel="prev" href="6、变量解构赋值.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="1、let.html">
+            
+                <a href="1、let.html">
+            
+                    
+                    1、let、const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="2、块级作用域.html">
+            
+                <a href="2、块级作用域.html">
+            
+                    
+                    2、块级作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="3、块级作用域和函数.html">
+            
+                <a href="3、块级作用域和函数.html">
+            
+                    
+                    3、块级作用域和函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="4、顶层对象&globalThis.html">
+            
+                <a href="4、顶层对象&globalThis.html">
+            
+                    
+                    4、顶层对象&globalThis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="5、const.html">
+            
+                <a href="5、const.html">
+            
+                    
+                    5、const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="6、变量解构赋值.html">
+            
+                <a href="6、变量解构赋值.html">
+            
+                    
+                    6、变量解构赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.7" data-path="7、Set.html">
+            
+                <a href="7、Set.html">
+            
+                    
+                    7、Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="8、WeakSet.html">
+            
+                <a href="8、WeakSet.html">
+            
+                    
+                    8、WeakSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="9、Map.html">
+            
+                <a href="9、Map.html">
+            
+                    
+                    9、Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="10、WeakMap.html">
+            
+                <a href="10、WeakMap.html">
+            
+                    
+                    10、WeakMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="11、Proxy.html">
+            
+                <a href="11、Proxy.html">
+            
+                    
+                    11、Proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="12、Reflect.html">
+            
+                <a href="12、Reflect.html">
+            
+                    
+                    12、Reflect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.13" data-path="13、Promise对象.html">
+            
+                <a href="13、Promise对象.html">
+            
+                    
+                    13、Promise对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.14" data-path="14、async函数.html">
+            
+                <a href="14、async函数.html">
+            
+                    
+                    14、async函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.15" data-path="15、Generator函数的语法.html">
+            
+                <a href="15、Generator函数的语法.html">
+            
+                    
+                    15、Generator函数的语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >7、Set</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="set">Set</h4>
+<ul>
+<li><p>&#x7C7B;&#x4F3C;&#x4E8E;&#x6570;&#x7EC4;&#xFF0C;&#x4F46;&#x6210;&#x5458;&#x552F;&#x4E00;</p>
+</li>
+<li><p>(Array)&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x7528;&#x4E8E;&#x521D;&#x59CB;&#x5316;</p>
+<pre><code class="lang-shell">//&#x6570;&#x7EC4;&#x53BB;&#x91CD;
+[...new Set(array)]
+Array.from(new Set(array))
+</code></pre>
+<pre><code class="lang-shell">//&#x5B57;&#x7B26;&#x4E32;&#x53BB;&#x91CD;
+[...new Set(&apos;aabbccdd&apos;)].join(&apos;&apos;)
+</code></pre>
+</li>
+<li><p>(Add)Set&#x4E2D;add&#x503C;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</p>
+<ul>
+<li><p>&#x4F46;&#x662F;Set&#x5185;&#x90E8;&#x4EFB;&#x52A1;NaN&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x503C;&#xFF1B;&#x7CBE;&#x786E;&#x8FD0;&#x7B97;&#x4E2D;NaN&#x5E76;&#x4E0D;&#x7B49;&#x4E8E;&#x81EA;&#x8EAB;</p>
+</li>
+<li><p>&#x4F8B;&#x5982;&#xFF1A;5&#x548C;&#x2018;5&#x2019;&#x662F;&#x4E24;&#x4E2A;&#x503C;</p>
+<pre><code class="lang-shell">let set = new Set();
+let a = NaN;
+let b = NaN;
+set.add(a);
+set.add(b);
+console.log(set);    //{NaN}
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>(Object)Set&#x4E2D;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x603B;&#x662F;&#x4E0D;&#x76F8;&#x7B49;&#x7684;</p>
+<pre><code class="lang-shell">let set = new Set();
+set.add({});
+console.log(set.size);    //1
+set.add({});
+console.log(set.size);    //2
+</code></pre>
+</li>
+</ul>
+<h4 id="set&#x5B9E;&#x4F8B;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;">Set&#x5B9E;&#x4F8B;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;</h4>
+<ul>
+<li>size    &#x6210;&#x5458;&#x6570;&#x76EE;</li>
+<li>add()   &#x6DFB;&#x52A0;&#x6210;&#x5458;&#xFF1B;&#x8FD4;&#x56DE;&#x672C;&#x8EAB;</li>
+<li>delete()    &#x5220;&#x9664;&#x672C;&#x8EAB;&#xFF1B;&#x8FD4;&#x56DE;&#x5E03;&#x5C14;&#x503C;</li>
+<li>has()    &#x67E5;&#x8BE2;&#x662F;&#x5426;&#x5305;&#x542B;&#xFF1B;&#x8FD4;&#x56DE;&#x5E03;&#x5C14;&#x503C;</li>
+<li>clear()    &#x6E05;&#x9664;&#x6240;&#x6709;&#x6210;&#x5458;&#xFF1B;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h4 id="set&#x904D;&#x5386;&#x64CD;&#x4F5C;">Set&#x904D;&#x5386;&#x64CD;&#x4F5C;</h4>
+<ul>
+<li>keys()        &#x8FD4;&#x56DE;&#x952E;&#x540D;</li>
+<li>values()        &#x8FD4;&#x56DE;&#x503C;(&#x7531;&#x4E8E;Set&#x6CA1;&#x6709;&#x952E;&#x540D;&#xFF1B;&#x56E0;&#x6B64;&#x5B83;keys&#x548C;values&#x6240;&#x5F97;&#x7684;&#x503C;&#x5B8C;&#x5168;&#x4E00;&#x6837;)</li>
+<li>entries()         &#x8FD4;&#x56DE;&#x952E;&#x503C;&#x5BF9;</li>
+<li>forEach()           &#x4F7F;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x904D;&#x5386;&#x6BCF;&#x4E2A;&#x6210;&#x5458;</li>
+</ul>
+<pre><code class="lang-shell">let set = new Set([&quot;aaa&quot;,&quot;bbb&quot;,&quot;ccc&quot;]);
+for(let item of set.keys()){
+console.log(item)    //aaa bbb ccc
+}
+for(let item of set.values()){
+console.log(item)    //aaa bbb ccc
+}
+for(let item of set.entries()){
+console.log(item)    //[&quot;aaa&quot;,&quot;aaa&quot;] [&quot;bbb&quot;,&quot;bbb&quot;] [&quot;ccc&quot;,&quot;ccc&quot;]
+}
+</code></pre>
+<ul>
+<li><p>Set&#x7ED3;&#x6784;&#x7684;&#x5B9E;&#x4F8B;&#x9ED8;&#x8BA4;&#x53EF;&#x904D;&#x5386;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x904D;&#x5386;&#x751F;&#x6210;&#x5668;&#x7684;&#x51FD;&#x6570;&#x5C31;&#x662F;values&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x7528;for of&#x76F4;&#x63A5;&#x904D;&#x5386;;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;<code>forEach</code></p>
+<pre><code class="lang-shell">let set = new Set([&quot;aaa&quot;,&quot;bbb&quot;,&quot;ccc&quot;]);
+for(let item of set){
+    console.log(item)    //aaa bbb ccc
+}
+</code></pre>
+<pre><code class="lang-shell">let set = new Set([&quot;aaa&quot;,&quot;bbb&quot;,&quot;ccc&quot;]);
+set.forEach((value,key)=&gt;{
+console.log(key+&apos;:&apos;+value)//aaa:aaa bbb:bbb ccc:ccc
+})
+</code></pre>
+</li>
+</ul>
+<h4 id="set&#x5B9E;&#x73B0;&#x5E76;&#x96C6;&#x3001;&#x4EA4;&#x96C6;&#x3001;&#x5DEE;&#x96C6;">Set&#x5B9E;&#x73B0;&#x5E76;&#x96C6;&#x3001;&#x4EA4;&#x96C6;&#x3001;&#x5DEE;&#x96C6;</h4>
+<pre><code class="lang-shell">let a = new Set([1,2,3,4]);
+let b = new Set([3,4,5,6]);
+
+//&#x5E76;&#x96C6;
+let union = new Set([...a,...b]);
+
+//&#x4EA4;&#x96C6;
+let intersect = new Set([...a].fliter(x =&gt; b.has(x)));
+
+//&#x5DEE;&#x96C6;
+let difference = new Set([...a].fliter(x =&gt; !b.has(x)))
+</code></pre>
+<h4 id="&#x904D;&#x5386;&#x64CD;&#x4F5C;&#x4E2D;&#x540C;&#x6B65;&#x6539;&#x53D8;set&#x4E2D;&#x7684;&#x503C;">&#x904D;&#x5386;&#x64CD;&#x4F5C;&#x4E2D;&#x540C;&#x6B65;&#x6539;&#x53D8;Set&#x4E2D;&#x7684;&#x503C;</h4>
+<ul>
+<li>set&#x6620;&#x5C04;&#x51FA;&#x65B0;&#x7684;&#x7ED3;&#x6784;</li>
+</ul>
+<pre><code class="lang-shell">let set = new Set([1,2,3]);
+set = new Set([...set].map(item =&gt; item*2));
+console.log(set)//2,4,6
+</code></pre>
+<ul>
+<li><p>&#x5229;&#x7528;Array.from</p>
+<pre><code class="lang-sehll">let set = new Set([1,2,3]);
+set = new Set(Array.from(set,val =&gt; val*2));
+console.log(set);    //2,4,6
+</code></pre>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6、变量解构赋值.html" class="navigation navigation-prev " aria-label="Previous page: 6、变量解构赋值">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8、WeakSet.html" class="navigation navigation-next " aria-label="Next page: 8、WeakSet">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"7、Set","level":"1.1.7","depth":2,"next":{"title":"8、WeakSet","level":"1.1.8","depth":2,"path":"doc/8、WeakSet.md","ref":"doc/8、WeakSet.md","articles":[]},"previous":{"title":"6、变量解构赋值","level":"1.1.6","depth":2,"path":"doc/6、变量解构赋值.md","ref":"doc/6、变量解构赋值.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/7、Set.md","mtime":"2019-12-30T07:03:22.662Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-04T08:46:32.709Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
